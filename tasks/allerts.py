@@ -16,7 +16,7 @@ try:
         return str(math.log(abs(12*math.sin(int(x)))))
 
     x = int(browser.find_element_by_id('input_value').text)
-    browser.find_element_by_id('answer').send_keys(calc(x))
+    browser.find_element_by_tag_name('answer').send_keys(calc(x))
     browser.find_element_by_class_name('btn').click()
 
 finally:
